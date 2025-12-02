@@ -6,6 +6,7 @@ const password = "abc123";
 const role = "user";
 
     try{
+        console.log("i am here ")
         const res = await pool.query(
      'SELECT NOW()'
     );
