@@ -7,10 +7,9 @@ const role = "user";
 
     try{
         const res = await pool.query(
-      "INSERT INTO users (username, password, role) VALUES ($1, $2, $3) RETURNING *;",
-      [username, password, role]
+     'SELECT NOW()'
     );
-        console.log(res.rows[0])
+        console.log(res.rows)
     }catch(error){
         console.log(error)
 
