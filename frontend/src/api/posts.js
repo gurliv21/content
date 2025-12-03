@@ -2,7 +2,7 @@ import axios from 'axios'
 import { api } from "../util/interceptor"
 export const getPosts =async()=>{
      try{
-        const res = await api.get("/posts/")
+        const res = await api.get("/posts")
         console.log(res.data)
         return res.data
 

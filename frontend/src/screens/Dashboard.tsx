@@ -14,8 +14,14 @@ function Dashboard() {
   const [post,setPost]=useState<Post[]>([])
   useEffect(()=>{
     async function apiCalls(){
-      const result = await getPosts()
+      try{
+              const result = await getPosts()
       setPost(result)
+
+      }catch(err){
+        console.log(err)
+      }
+
 
     }
     apiCalls( )
@@ -28,7 +34,7 @@ function Dashboard() {
     <div className='w-full' >
       <div  className='flex  justify-center   w-full'>
               <div className=''>
-              {post.length>0 ? post.map((p)=>(
+              {post?.length>0 ? post.map((p)=>(
           <PostComponent post={p} key={p.id}/>
       )):
       <div>No new post</div>}

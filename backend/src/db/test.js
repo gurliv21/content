@@ -15,8 +15,6 @@ const role = "user";
     }catch(error){
         console.log("is this the error ",error)
 
-    }finally{
-        pool.end()
     }
 }
 
