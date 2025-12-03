@@ -1,6 +1,8 @@
 import jwt from "jsonwebtoken"
 import dotenv from 'dotenv'
 dotenv.config()
+
+      console.log('header',process.env.JWT_SECRET)
 const auth=(req,res,next)=>{
     try{
       const header = req.headers.authorization;
@@ -23,3 +25,6 @@ const auth=(req,res,next)=>{
 
 }
 export default auth
+
+
+

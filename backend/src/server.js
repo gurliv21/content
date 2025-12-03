@@ -2,9 +2,14 @@ import express from 'express'
 import cors from 'cors' 
 import postRoutes from "./routes/post.routes.js"
 import authRoutes from "./routes/auth.routes.js"
+import { testJs } from './db/test.js'
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin:'*',
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}))
 app.use(express.json())
+testJs()
 const PORT = process.env.PORT || 4000
 
 

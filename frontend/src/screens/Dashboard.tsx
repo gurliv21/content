@@ -28,9 +28,10 @@ function Dashboard() {
     <div className='w-full' >
       <div  className='flex  justify-center   w-full'>
               <div className=''>
-              {post.map((p)=>(
+              {post.length>0 ? post.map((p)=>(
           <PostComponent post={p} key={p.id}/>
-      ))}
+      )):
+      <div>No new post</div>}
 
       </div>
       </div>
