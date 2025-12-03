@@ -9,7 +9,6 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
 }))
 app.use(express.json())
-testJs()
 const PORT = process.env.PORT || 4000
 
 
