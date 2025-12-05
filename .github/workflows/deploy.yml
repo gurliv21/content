@@ -18,7 +18,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.EC2_HOST }}
           REMOTE_USER: ec2-user
           ARGS: "-avz --delete"
-          SOURCE: "./content/"
+          SOURCE: "./"
           TARGET: "/home/ec2-user/content"
 
       - name: Install backend dependencies & restart PM2
