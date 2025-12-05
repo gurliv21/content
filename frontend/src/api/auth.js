@@ -16,6 +16,6 @@ export const loginIn=async(payload)=>{
          return result.data
 
     }catch(err){
-        console.error("there is error signing up",err)
+        console.error("there is a error loginup up",err)
     }
 }
