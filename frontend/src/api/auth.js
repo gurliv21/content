@@ -6,7 +6,7 @@ export const signup=async(payload)=>{
          return result.data
 
     }catch(err){
-        console.error(" error signing up",err)
+        console.error("there is an error signing up",err)
     }
 }
 
