@@ -29,7 +29,7 @@ const CreatePost: React.FC = () => {
             const result = await createPost({ title, desc, image })
             console.log(result)
             if(result.message=="post created"){
-                navigate(-1)
+                navigate("/")
             }
 
     }catch(error){
